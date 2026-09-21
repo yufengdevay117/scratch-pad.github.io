@@ -18,6 +18,7 @@
 
 function print(value) {
   // YOUR CODE HERE //
+  console.log(value);
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

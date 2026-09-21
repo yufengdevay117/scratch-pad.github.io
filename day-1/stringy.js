@@ -22,7 +22,7 @@ function length(string) {
   // YOUR CODE HERE //
   
   // return of string
-  console.log
+
   return string.length;
 
 }
@@ -32,7 +32,7 @@ function length(string) {
  */
 
 function toLowerCase(string) {
-  // YOUR CODE HERE //
+  // YOUR CODE HERE //zzz
   return string.toLowerCase();
 }
 
@@ -93,7 +93,7 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE HERE //
-  return string[string.length - 1].toLowerCase() === char.toLowerCase;
+  return[string.length - 1].toLowerCase() === char.toLowerCase();
 }
 
 /**
@@ -144,10 +144,14 @@ function longest(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortAscending(stringOne, stringTwo) {
-  if (stringOne < stringTwo){
-    
+  // YOUR CODE HERE //
+  if (stringOne < stringTwo) {
+    return 1;
+  } else if (stringOne > stringTwo) {
+    return -1;
+  } else {
+    return 0;
   }
-
 }
 
 /**
@@ -159,6 +163,13 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE HERE //
+  if (stringOne < stringTwo) {
+    return 1;
+  } else if (stringOne > stringTwo) {
+    return -1;
+  } else {
+    return 0;
+  }
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
