@@ -11,11 +11,20 @@
  *
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
+ * 
+ * Function takes in a string
+ * Function returns the length of the string as a number
+ * N/A
+ * N/A
  */
 
 function length(string) {
   // YOUR CODE HERE //
   
+  // return of string
+  console.log
+  return string.length;
+
 }
 
 /**
@@ -24,6 +33,7 @@ function length(string) {
 
 function toLowerCase(string) {
   // YOUR CODE HERE //
+  return string.toLowerCase();
 }
 
 /**
@@ -32,6 +42,7 @@ function toLowerCase(string) {
 
 function toUpperCase(string) {
   // YOUR CODE HERE //
+  return string.toUpperCase();
 }
 
 /**
@@ -46,6 +57,7 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE HERE //
+  return string.toLowerCase().split(' ').join('-');
 }
 
 /**
@@ -64,6 +76,7 @@ function toDashCase(string) {
 
 function beginsWith(string, char) {
   // YOUR CODE HERE //
+  return string[0].toLowerCase() === char.toLowerCase();
 }
 
 /**
@@ -80,6 +93,7 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE HERE //
+  return string[string.length - 1].toLowerCase() === char.toLowerCase;
 }
 
 /**
@@ -89,6 +103,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
   // YOUR CODE HERE //
+  return stringOne + stringTwo;
 }
 
 /**
@@ -104,6 +119,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
   // YOUR CODE HERE //
   var args = Array.from(arguments);
+  return args.join('');
 }
 
 /**
@@ -117,6 +133,7 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE HERE //
+  return stringOne.length >= stringTwo.length ? stringOne : stringTwo;
 }
 
 /**
@@ -127,7 +144,10 @@ function longest(stringOne, stringTwo) {
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
 function sortAscending(stringOne, stringTwo) {
-  // YOUR CODE HERE //
+  if (stringOne < stringTwo){
+    
+  }
+
 }
 
 /**
