@@ -93,7 +93,7 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE HERE //
-  return[string.length - 1].toLowerCase() === char.toLowerCase();
+  return string.toLowerCase().endsWith(char.toLowerCase());
 }
 
 /**
@@ -164,9 +164,9 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE HERE //
   if (stringOne < stringTwo) {
-    return 1;
-  } else if (stringOne > stringTwo) {
     return -1;
+  } else if (stringOne > stringTwo) {
+    return 1;
   } else {
     return 0;
   }
