@@ -12,6 +12,11 @@
 
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
+  return {
+    id: id,
+    nameFirst: nameFirst,
+    nameLast: nameLast
+  };
 }
 
 var contacts = [
@@ -51,6 +56,13 @@ var contacts = [
 
 function findContact(array, fullName) {
   // YOUR CODE HERE
+  for (let i = 0; i < contacts.length; i++) {
+    const contact = contacts[i];
+    if (`${contact.nameFirst} ${contact.nameLast}` === fullName) {
+      return contact;
+    }
+  }
+  return undefined;
 }
 
 /**
@@ -60,6 +72,10 @@ function findContact(array, fullName) {
  */
 function removeContact(array, contact) {
   // YOUR CODE HERE
+  const index = array.findIndex(item => item.id === contact.id);
+  if (index !== -1) {
+    array.splice(index, 1);
+  }
 }
 
 /**
@@ -69,6 +85,14 @@ function removeContact(array, contact) {
  */
 function getNamesThatBeginWithLetter(array, letter) {
   // YOUR CODE HERE
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    const contact = array[i];
+    if (contact.nameFirst.toLowerCase().startsWith(letter.toLowerCase())) {
+      result.push(contact); // Push the object itself, not the formatted name string
+    }
+  }
+  return result;
 }
 
 /**
@@ -81,6 +105,12 @@ function getNamesThatBeginWithLetter(array, letter) {
  */
 function getAllContactNames(array) {
   // YOUR CODE HERE
+  const names = [];
+  for (let i = 0; i < array.length; i++) {
+    const contact = array[i];
+    names.push(`${contact.nameFirst} ${contact.nameLast}`);
+  }
+  return names.join('\n');
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

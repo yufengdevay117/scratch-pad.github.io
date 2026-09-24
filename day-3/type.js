@@ -16,6 +16,7 @@
  */
 function isArray(value) {
   // YOUR CODE HERE //
+  return Array.isArray(value)
 }
 
 /**
@@ -34,6 +35,7 @@ function isArray(value) {
  */
 function isObject(value) {
   // YOUR CODE HERE //
+  return Object.prototype.toString.call(value) === '[object Object]';
 }
 
 /**
@@ -44,6 +46,7 @@ function isObject(value) {
  */
 function isCollection(value) {
   // YOUR CODE HERE //
+  return Array.isArray(value) || isObject(value);
 }
 
 /**
@@ -67,6 +70,10 @@ function isCollection(value) {
  */
 function typeOf(value) {
   // YOUR CODE HERE //
+  if (Array.isArray(value)) return 'array';
+  if (value === null) return 'null';
+  if (value instanceof Date) return 'date';
+  return typeof value;
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
